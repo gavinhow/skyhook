@@ -17,7 +17,7 @@ class SempahoreCI extends BaseProvider {
             author: {
                 name: `${this.body.project_name}:${this.body.branch_name}`
             },
-            description: `${this.body.result}`
+            description: `${result}`
         });
     }
 }
