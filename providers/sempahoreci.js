@@ -14,8 +14,7 @@ class SempahoreCI extends BaseProvider {
             title: ` ${this.body.event} #${this.body.build_number}`,
             url: this.body.build_url,
             author: {
-                name: `${this.body.project_name}:${this.body.branch_name} - ${this.body.result}`,
-                icon_url: `https://github.com/${this.body.payload.committer_name}.png`
+                name: `${this.body.project_name}:${this.body.branch_name} - ${this.body.result}`
             },
             description: `${this.body.commit.author_name}\n${this.body.commit.timestamp}\n${this.body.commit.id}`
         });
