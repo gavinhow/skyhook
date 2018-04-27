@@ -18,6 +18,7 @@ const providers = {
     jenkins: require('./providers/jenkins'),
     patreon: require('./providers/patreon'),
     pingdom: require('./providers/pingdom'),
+    semaphoreci: require('./providers/sempahoreci')
     trello: require('./providers/trello'),
     travis: require('./providers/travis'),
     unity: require('./providers/unity'),
