@@ -9,14 +9,15 @@ class SempahoreCI extends BaseProvider {
     }
 
     async parseData(req) {
-        this.payload.setEmbedColor(0x343433);
+        let result = (this.body.result).toUpperCase();
+        this.payload.setEmbedColor(0xF9F2DC);
         this.payload.addEmbed({
-            title: ` ${this.body.event} #${this.body.build_number}`,
+            title: `${this.body.event} #${this.body.build_number}`,
             url: this.body.build_url,
             author: {
-                name: `${this.body.project_name}:${this.body.branch_name} - ${this.body.result}`
+                name: `${this.body.project_name}:${this.body.branch_name}`
             },
-            description: `${this.body.commit.author_name}\n${this.body.commit.timestamp}\n${this.body.commit.id}`
+            description: `${this.body.result}`
         });
     }
 }
